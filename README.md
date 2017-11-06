@@ -12,6 +12,8 @@ docker build -t vicanso/nginx .
 
 ## docker run 
 
+nginx的日志通过sys log，默认的地址为`SYS_LOG:3412`，因此需要配置相应的host
+
 production
 
 ```
