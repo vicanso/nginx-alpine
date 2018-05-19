@@ -1,0 +1,6 @@
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t nginx .
+  - docker images
+  - docker tag nginx $DOCKER_USERNAME/nginx
+  - docker push $DOCKER_USERNAME/nginx
